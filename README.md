@@ -12,6 +12,27 @@ Either run
 $ ./composer.phar require arunsahlam/yii2-morrisjs
 ```
 
+## Usage
+
+### Example of code
+```php
+use arunsahlam\plugins\morrisjs\Chart;
+
+echo Chart::widget([
+	/*
+	 * Chart Types
+	 *	Chart::TYPE_AREA
+	 *	Chart::TYPE_BAR
+	 *	Chart::TYPE_DONUT
+	 *	Chart::TYPE_LINE
+	 */
+    'type' => Chart::TYPE_DONUT, 
+    'options' => [],
+    'htmlOptions' => [],
+]);
+
+```
+
 ## Morris.js usage
 
 Go to [Olly Smith](https://morrisjs.github.io/morris.js/) for information.
