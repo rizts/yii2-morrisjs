@@ -95,10 +95,23 @@ class Chart extends Widget
 	{
 		$view = $this->getView();
 		MorrisjsAsset::register($view);
-		$options = Json::encode($this->options);
-		$js = "new Morris.$name($options)";
+
+		if (isset($this->options['object_id']) {
+			$object_id = $this->options['object_id'];
+			unset($this->options['object_id']);
+
+			$options = Json::encode($this->options);
+
+			$js = "var $object_id = new Morris.$name($options)";
 		
-		$view->registerJs($js);
+			$view->registerJs($js);
+		} else {
+			$options = Json::encode($this->options);
+
+			$js = "new Morris.$name($options)";
+		
+			$view->registerJs($js);
+		}
 	}
 
 	/**
