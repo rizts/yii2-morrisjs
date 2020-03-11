@@ -96,7 +96,7 @@ class Chart extends Widget
 		$view = $this->getView();
 		MorrisjsAsset::register($view);
 
-		if (isset($this->options['object_id']) {
+		if (isset($this->options['object_id'])) {
 			$object_id = $this->options['object_id'];
 			unset($this->options['object_id']);
 
